@@ -1,0 +1,22 @@
+{
+  "name": "queen_attack",
+  "version": "1.0.0",
+  "description": "Application to determine if chess queens can attack based on position",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "21.1.0",
+    "jest-cli": "21.1.0",
+    "gulp-jest": "2.0.0",
+    "gulp": "3.9.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/sarah12345/GHC2017"
+  }
+}
