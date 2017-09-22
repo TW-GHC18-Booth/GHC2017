@@ -60,4 +60,14 @@ Requirements:
 * Ruby 2.4
 * Rspec 3.5
 
+Commands:
+* rspec
+
 ## JavaScript
+Requirements:
+* Node 6
+* Npm 5
+
+Commands:
+*  npm install
+*  gulp jest
