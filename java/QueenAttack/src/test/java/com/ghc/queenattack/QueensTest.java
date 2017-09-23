@@ -14,16 +14,6 @@ public class QueensTest {
     public ExpectedException expectedException = ExpectedException.none();
 
     @Test
-    public void testQueensThatDoNotShareRankFileOrDiagonalCannotAttack() {
-        int[] blackPosition = {2,4};
-        int[] whitePosition = {6,6};
-        Queens queens = new Queens(blackPosition, whitePosition);
-
-        assertFalse(queens.canAttack());
-    }
-
-    @Ignore("Remove to run test")
-    @Test
     public void testQueensCanAttackOnTheSameRank() {
         int[] blackPosition = {2,4};
         int[] whitePosition = {2,6};
@@ -91,6 +81,16 @@ public class QueensTest {
         int[] blackPosition = {-2,2};
         int[] whitePosition = {5,5};
         new Queens(blackPosition, whitePosition);
+    }
+
+    @Ignore("Remove to run test")
+    @Test
+    public void testQueensThatDoNotShareRankFileOrDiagonalCannotAttack() {
+        int[] blackPosition = {2,4};
+        int[] whitePosition = {6,6};
+        Queens queens = new Queens(blackPosition, whitePosition);
+
+        assertFalse(queens.canAttack());
     }
 
     @Ignore("Remove to run test")
