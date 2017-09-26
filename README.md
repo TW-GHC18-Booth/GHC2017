@@ -26,14 +26,14 @@
 * Translation of characters are at the top of the file
 * Separate letters with spaces; separate words with three spaces
 * Handle unrecognized characters
-* Provided in Java and Ruby
+* Provided in Java,Ruby and Clojure
 
 ## Queen Attack
 * Implement a program that takes two queen positions on a chess board and determines if they can attach each other
 * Source: http://exercism.io/exercises/java/queen-attack
 * Queens can attack if they are in the same row (rank), column (file), or diagonal path
 * Validate input positions
-* Provided in Java and Ruby
+* Provided in Java, Ruby and Clojure
 
 ## Test Invaders
 * This is an app similar to Space Invaders
@@ -71,3 +71,11 @@ Requirements:
 Commands:
 *  npm install
 *  gulp jest
+
+## Clojure
+Requirements:
+* Java 8
+* leiningen
+
+Commands:
+lein test
