@@ -3,11 +3,11 @@
 
 ### To build
 * clone the repository
-* from Terminal, run 
-** dotnet restore
-** 'dotnet build'
+* from Terminal, run
+`dotnet restore`
+`dotnet build`
 
 
 ### To test
 * With the MorseCodeTranslator.Tests directory as the current directory, run
-** dotnet test --no-build -v n
+`dotnet test --no-build -v n`
