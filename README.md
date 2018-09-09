@@ -1,9 +1,9 @@
-# Grace Hopper Conference 2017 Coding Exercises
+# Grace Hopper Conference 2018 Console App Coding Exercises
 
 # Exercises
 
 ## General Notes
-* Problems are given in Java, Ruby, and/or JavaScript
+* Problems are given in Java, Ruby, .NET Core, and/or JavaScript
 * Test cases are given to guide you along the way
 * Classes are empty
 
@@ -26,27 +26,14 @@
 * Translation of characters are at the top of the file
 * Separate letters with spaces; separate words with three spaces
 * Handle unrecognized characters
-* Provided in Java,Ruby and Clojure
+* Provided in Java, Ruby, .NET Core, and Clojure
 
 ## Queen Attack
 * Implement a program that takes two queen positions on a chess board and determines if they can attach each other
 * Source: http://exercism.io/exercises/java/queen-attack
 * Queens can attack if they are in the same row (rank), column (file), or diagonal path
 * Validate input positions
-* Provided in Java, Ruby and Clojure
-
-## Test Invaders
-* This is an app similar to Space Invaders
-* Part of the app is already built, but there are some failing tests and some missing functionality
-* Fix the failing tests and add more as you go
-* This one is in a separate repo because it's forked from another repo
-* https://github.com/sarah12345/TestInvaders
-* Hints:
-  * Follow the instructions in the repo
-  * Look for failing js tests or TODO comments
-  * Add more functionality, like giving the tank multiple lives, ending the game when it's destroyed, etc
-  * Be careful with the Jasmine tests. Sometimes syntax errors will cause false success
-* Provided in JavaScript only
+* Provided in Java, Ruby, .NET Core, and Clojure
 
 # Languages
 
@@ -79,3 +66,12 @@ Requirements:
 
 Commands:
 lein test
+
+## .NET Core
+Requirements:
+* .NET Core 2.1+
+
+Commands:
+* dotnet restore
+* dotnet build
+* dotnet test
