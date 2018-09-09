@@ -75,3 +75,18 @@ Commands:
 * dotnet restore
 * dotnet build
 * dotnet test
+
+# Installation Notes
+
+On a Macbook, you can install most of the required packaged via homebrew, with some exceptions.
+
+An approach to installing the prerequisites on a Macbook can be found below:
+* Install Node Version Manager (nvm): `brew install nvm`
+* Use nvm to install Node lts:  `nvm install —lts`
+* Install Java `brew cask install java`
+* Install Gradle `brew install gradle`
+* Install Clojure `brew install clojure`
+* Install Leiningen (for Clojure) `brew install leiningen`
+* Install ruby version manager and ruby `curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --ruby` 
+* Install .NET Core 2.1 SDK: https://www.microsoft.com/net/learn/get-started-with-dotnet-tutorial
+
