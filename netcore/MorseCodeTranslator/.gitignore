@@ -1,0 +1,6 @@
+**/.vs
+**/.vscode
+**/MorseCodeTranslator.Tests/bin
+**/MorseCodeTranslator.Tests/obj
+**/MorseCodeTranslatorService/bin
+**/MorseCodeTranslatorService/obj
