@@ -26,6 +26,6 @@ class QueensAnswers
   end
 
   def valid_position?
-    return ((@black[0] >= 0) && (@black[1] >= 0) && (@black[0] < 8) && (@black[1] < 8) && (@white[0] >= 0) && (@white[1] >= 0) && (@white[0] < 8) && (@white[1] < 8))
+    return ((@black[0] >= 0) && (@black[1] >= 0) && (@black[0] < 8) && (@black[1] < 8) && (@white[0] >= 0) && (@white[1] >= 0) && (@white[0] < 8) && (@white[1] < 8)) && !((@black[0]==@white[0]) && (@black[1]==@white[1]))
   end
 end
