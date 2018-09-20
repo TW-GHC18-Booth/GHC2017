@@ -1,65 +1,65 @@
-require('../app/translator');
+const translator = require('../app/translator');
 
 describe('translator', () => {
 
-  describe('translate_english_to_morse_code', () => {
+  describe('translateEnglishToMorseCode', () => {
 
-    test('translates single letter A', () => {
-      const translation = translate_english_to_morse_code("A");
-      expect(translation).toEqual(".-");
+    it('translates single letter A', () => {
+      expect(translator.translateEnglishToMorseCode("A")).
+      toEqual(".-");
     });
 
-    test.skip('translates single letter lowercase a', () => {
-      const translation = translate_english_to_morse_code("a");
-      expect(translation).toEqual(".-");
+    it.skip('translates single letter lowercase a', () => {
+      expect(translator.translateEnglishToMorseCode("a")).
+      toEqual(".-");
     });
 
-    test.skip('translates single letter B', () => {
-      const translation = translate_english_to_morse_code("B");
-      expect(translation).toEqual("-...");
+    it.skip('translates single letter B', () => {
+      expect(translator.translateEnglishToMorseCode("B")).
+      toEqual("-...");
     });
 
-    test.skip('translates word', () => {
-      const translation = translate_english_to_morse_code("hello");
-      expect(translation).toEqual(".... . .-.. .-.. ---");
+    it.skip('translates word', () => {
+      expect(translator.translateEnglishToMorseCode("hello")).
+      toEqual(".... . .-.. .-.. ---");
     });
 
-    test.skip('translate sentence', () => {
-      const translation = translate_english_to_morse_code("Hello Grace Hopper");
-      expect(translation).toEqual(".... . .-.. .-.. ---   --. .-. .- -.-. .   .... --- .--. .--. . .-.");
+    it.skip('translate sentence', () => {
+      expect(translator.translateEnglishToMorseCode("Hello Grace Hopper")).
+      toEqual(".... . .-.. .-.. ---   --. .-. .- -.-. .   .... --- .--. .--. . .-.");
     });
 
-    test.skip('handles unknown characters', () => {
-      expect(() => translate_english_to_morse_code("~`")).
+    it.skip('handles unknown characters', () => {
+      expect(translator.translateEnglishToMorseCode("~`")).
         toThrow("Untranslatable characters");
     });
 
   });
 
   // optional
-  describe('translate_morse_code_to_english', () => {
-    test.skip('translates single letter A', () => {
-      const translation = translate_morse_code_to_english(".-");
-      expect(translation).toEqual("A");
+  describe('translateMorseCodeToEnglish', () => {
+    
+    it.skip('translates single letter A', () => {
+      expect(translator.translateMorseCodeToEnglish(".-")).toEqual("A");
     });
 
-    test.skip('translates single letter B', () => {
-      const translation = translate_morse_code_to_english("-...");
-      expect(translation).toEqual("B");
+    it.skip('translates single letter B', () => {
+      expect(translator.translateMorseCodeToEnglish("-...")).toEqual("B");
     });
 
-    test.skip('translates word', () => {
-      const translation = translate_morse_code_to_english(".... . .-.. .-.. ---");
-      expect(translation).toEqual("HELLO");
+    it.skip('translates word', () => {
+      expect(translator.translateMorseCodeToEnglish(".... . .-.. .-.. ---"))
+      .toEqual("HELLO");
     });
 
-    test.skip('translate sentence', () => {
-      const translation = translate_morse_code_to_english(".... . .-.. .-.. ---   --. .-. .- -.-. .   .... --- .--. .--. . .-.");
-      expect(translation).toEqual("HELLO GRACE HOPPER");
+    it.skip('translate sentence', () => {
+      expect(translator.
+        translateMorseCodeToEnglish(".... . .-.. .-.. ---   --. .-. .- -.-. .   .... --- .--. .--. . .-.")).
+      toEqual("HELLO GRACE HOPPER");
     });
 
-    test.skip('handles unknown characters', () => {
-      expect(() => translate_english_to_morse_code("~`")).
+    it.skip('handles unknown characters', () => {
+      expect(translator.translateMorseCodeToEnglish("~`")).
         toThrow("Untranslatable characters");
     });
 
