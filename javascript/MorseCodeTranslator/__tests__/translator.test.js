@@ -9,7 +9,7 @@ describe('translator', () => {
       toEqual(".-");
     });
 
-    it.skip('translates single letter lowercase a', () => {
+    it('translates single letter lowercase a', () => {
       expect(translator.translateEnglishToMorseCode("a")).
       toEqual(".-");
     });
