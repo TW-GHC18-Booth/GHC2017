@@ -2,9 +2,7 @@ var englishLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'
 var morseCodeCharacters = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----" ];
 
 const translateEnglishToMorseCode = (english) => {
-  if (english.toUpperCase() === 'A'){
-    return ".-"
-  }
+  return morseCodeCharacters[englishLetters.indexOf(english.toUpperCase())]
 }
 
 const translateMorseCodeToEnglish = (morseCode) => {

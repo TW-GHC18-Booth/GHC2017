@@ -14,7 +14,7 @@ describe('translator', () => {
       toEqual(".-");
     });
 
-    it.skip('translates single letter B', () => {
+    it('translates single letter B', () => {
       expect(translator.translateEnglishToMorseCode("B")).
       toEqual("-...");
     });
