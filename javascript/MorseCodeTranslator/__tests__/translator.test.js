@@ -30,7 +30,7 @@ describe('translator', () => {
     });
 
     it.skip('handles unknown characters', () => {
-      expect(function (){
+      expect(() => {
         translator.translateEnglishToMorseCode("~`")
       }).
         toThrow(new Error("Untranslatable characters"));
