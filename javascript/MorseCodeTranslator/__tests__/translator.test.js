@@ -19,7 +19,7 @@ describe('translator', () => {
       toEqual("-...");
     });
 
-    it.skip('translates word', () => {
+    it('translates word', () => {
       expect(translator.translateEnglishToMorseCode("hello")).
       toEqual(".... . .-.. .-.. ---");
     });
