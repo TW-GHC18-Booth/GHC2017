@@ -3,30 +3,33 @@ const morseCodeCharacters = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", ".
 
 const translateEnglishToMorseCode = (english) => {
 
-  //Test 1: translate the single uppercase A - simplest code to get the test to work
+  // Test 1: translate the single uppercase A - simplest code to get the test to work
   if (english = 'A'){
     return ".-"
   }
 
-  //Test 2: refactor to convert all english letters to uppercase - simplest code to get the test to work
+  // // Test 2: refactor to convert all english letters to uppercase - simplest code to get the test to work
   if (english.toUpperCase() = 'A'){
     return ".-"
   }
 
-  //Test 3: refactor to look up english index in englishLetters, and return the corresponding index from morseCodeCharacters
-  // return morseCodeCharacters[englishLetters.indexOf(english.toUpperCase())]
+  // Test 3: refactor to look up english index in englishLetters, and return the corresponding index from morseCodeCharacters
+  // How can this be refactored?
 
-  //Test 4: refactor to separate morse code characters with spaces when converting english words
+  const englishToUpperCase = english.toUpperCase();
+  const indexOfEnglishLetter = englishLetters.indexOf(englishToUpperCase)
+
+  return morseCodeCharacters[indexOfEnglishLetter]
+
+  // Test 4: refactor to separate morse code characters with spaces when converting english words
   var englishToLetters = english.toUpperCase().split("");
-  var englishToMorseCode = "";
+  var morseCodeTranslation = "";
 
-  if(englishToLetters.length > 1){
     englishToLetters.forEach(letter => {
-      englishToMorseCode += morseCodeCharacters[englishLetters.indexOf(letter)] + " ";
+      var indexOfLetter = englishLetters.indexOf(letter);
+      morseCodeTranslation += morseCodeCharacters[indexOfLetter] + " ";
     });
-    return englishToMorseCode.trim();
-  }
-  return morseCodeCharacters[englishLetters.indexOf(english.toUpperCase())]
+    return morseCodeTranslation.trim();
 }
 
 const translateMorseCodeToEnglish = (morseCode) => {
