@@ -29,9 +29,11 @@ describe('translator', () => {
       toEqual(".... . .-.. .-.. ---   --. .-. .- -.-. .   .... --- .--. .--. . .-.");
     });
 
-    it.skip('handles unknown characters', () => {
-      expect(translator.translateEnglishToMorseCode("~`")).
-        toThrow("Untranslatable characters");
+    it('handles unknown characters', () => {
+      expect(function (){
+        translator.translateEnglishToMorseCode("~`")
+      }).
+        toThrow(new Error("Untranslatable characters"));
     });
 
   });
