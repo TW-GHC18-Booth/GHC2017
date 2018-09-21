@@ -31,9 +31,8 @@ describe('translator', () => {
 
     it.skip('handles unknown characters', () => {
       expect(() => {
-        translator.translateEnglishToMorseCode("~`")
-      }).
-        toThrow(new Error("Untranslatable characters"));
+        translator.translateEnglishToMorseCode("~`")}).
+      toThrow(new Error("Untranslatable characters"));
     });
 
   });
@@ -50,8 +49,8 @@ describe('translator', () => {
     });
 
     it.skip('translates word', () => {
-      expect(translator.translateMorseCodeToEnglish(".... . .-.. .-.. ---"))
-      .toEqual("HELLO");
+      expect(translator.translateMorseCodeToEnglish(".... . .-.. .-.. ---")).
+      toEqual("HELLO");
     });
 
     it.skip('translate sentence', () => {
@@ -61,8 +60,9 @@ describe('translator', () => {
     });
 
     it.skip('handles unknown characters', () => {
-      expect(translator.translateMorseCodeToEnglish("~`")).
-        toThrow("Untranslatable characters");
+      expect(() => {
+        translator.translateMorseCodeToEnglish("~`")}).
+      toThrow(new Error("Untranslatable characters"));
     });
 
   });
