@@ -24,7 +24,7 @@ describe('translator', () => {
       toEqual(".... . .-.. .-.. ---");
     });
 
-    it.skip('translate sentence', () => {
+    it('translate sentence', () => {
       expect(translator.translateEnglishToMorseCode("Hello Grace Hopper")).
       toEqual(".... . .-.. .-.. ---   --. .-. .- -.-. .   .... --- .--. .--. . .-.");
     });

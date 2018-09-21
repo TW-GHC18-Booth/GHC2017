@@ -8,7 +8,7 @@ const translateEnglishToMorseCode = (english) => {
     return ".-"
   }
 
-  // // Test 2: refactor to convert all english letters to uppercase - simplest code to get the test to work
+  // Test 2: refactor to convert all english letters to uppercase - simplest code to get the test to work
   if (english.toUpperCase() = 'A'){
     return ".-"
   }
@@ -25,11 +25,25 @@ const translateEnglishToMorseCode = (english) => {
   var englishToLetters = english.toUpperCase().split("");
   var morseCodeTranslation = "";
 
-    englishToLetters.forEach(letter => {
+  englishToLetters.forEach(letter => {
+    var indexOfLetter = englishLetters.indexOf(letter);
+    morseCodeTranslation += morseCodeCharacters[indexOfLetter] + " ";
+  });
+  return morseCodeTranslation.trim();
+
+  // Test 5: refactor to put 3 spaces between morse code characters to designate spaces between words
+  var englishToLetters = english.toUpperCase().split("");
+  var morseCodeTranslation = "";
+
+  englishToLetters.forEach(letter => {
+    if(letter === " "){
+      morseCodeTranslation += "  ";
+    } else {
       var indexOfLetter = englishLetters.indexOf(letter);
       morseCodeTranslation += morseCodeCharacters[indexOfLetter] + " ";
-    });
-    return morseCodeTranslation.trim();
+    }
+  });
+  return morseCodeTranslation.trim();
 }
 
 const translateMorseCodeToEnglish = (morseCode) => {
