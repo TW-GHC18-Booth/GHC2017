@@ -4,32 +4,32 @@ describe('translator', () => {
 
   describe('translateEnglishToMorseCode', () => {
 
-    it('translates single letter A', () => {
+    it.skip('translates single letter A', () => {
       expect(translator.translateEnglishToMorseCode("A")).
       toEqual(".-");
     });
 
-    it('translates single letter lowercase a', () => {
+    it.skip('translates single letter lowercase a', () => {
       expect(translator.translateEnglishToMorseCode("a")).
       toEqual(".-");
     });
 
-    it('translates single letter B', () => {
+    it.skip('translates single letter B', () => {
       expect(translator.translateEnglishToMorseCode("B")).
       toEqual("-...");
     });
 
-    it('translates word', () => {
+    it.skip('translates word', () => {
       expect(translator.translateEnglishToMorseCode("hello")).
       toEqual(".... . .-.. .-.. ---");
     });
 
-    it('translate sentence', () => {
+    it.skip('translate sentence', () => {
       expect(translator.translateEnglishToMorseCode("Hello Grace Hopper")).
       toEqual(".... . .-.. .-.. ---   --. .-. .- -.-. .   .... --- .--. .--. . .-.");
     });
 
-    it('handles unknown characters', () => {
+    it.skip('handles unknown characters', () => {
       expect(function (){
         translator.translateEnglishToMorseCode("~`")
       }).
