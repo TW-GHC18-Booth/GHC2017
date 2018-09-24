@@ -12,7 +12,7 @@ describe('queen_attack', () => {
     expect(canAttack).toBe(true);
   });
 
-  it.skip('can attack on same file', () => {
+  it('can attack on same file', () => {
     const canAttack = queenAttack([4, 5], [2, 5]);
     expect(canAttack).toBe(true);
   });
