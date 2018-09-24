@@ -1,5 +1,5 @@
 const queen_attack = (black_position, white_position) => {
-  return false;
+  return black_position[0] === white_position[0];
 };
 
 module.exports = {
