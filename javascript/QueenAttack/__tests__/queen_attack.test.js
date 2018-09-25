@@ -42,17 +42,17 @@ describe('queen_attack', () => {
       toThrow('Invalid position: Must be between 0 and 7');
   });
 
-  it.skip('raises an error if the rank is off the board', () => {
+  it('raises an error if the rank is off the board', () => {
     expect(() => queenAttack([8, 4])).
       toThrow('Invalid position: Must be between 0 and 7');
   });
 
-  it.skip('raises an error if the file is negative', () => {
+  it('raises an error if the file is negative', () => {
     expect(() => queenAttack([2, -2])).
       toThrow('Invalid position: Must be between 0 and 7');
   });
 
-  it.skip('raises an error if the file is off the board', () => {
+  it('raises an error if the file is off the board', () => {
     expect(() => queenAttack([4, 8])).
       toThrow('Invalid position: Must be between 0 and 7');
   });
