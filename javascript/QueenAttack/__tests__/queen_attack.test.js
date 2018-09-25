@@ -1,4 +1,4 @@
-const queenAttack = require('../app/queen_attack');
+const queenAttack = require('../app/queen_attack').queen_attack;
 
 describe('queen_attack', () => {
 
