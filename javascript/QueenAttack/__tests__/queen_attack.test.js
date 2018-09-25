@@ -17,22 +17,22 @@ describe('queen_attack', () => {
     expect(canAttack).toBe(true);
   });
 
-  it.skip('can attack on first diagonal', () => {
+  it('can attack on first diagonal', () => {
     const canAttack = queenAttack([2, 2], [0, 4]);
     expect(canAttack).toBe(true);
   });
 
-  it.skip('can attack on second diagonal', () => {
+  it('can attack on second diagonal', () => {
     const canAttack = queenAttack([2, 2], [3, 1]);
     expect(canAttack).toBe(true);
   });
 
-  it.skip('can attack on third diagonal', () => {
+  it('can attack on third diagonal', () => {
     const canAttack = queenAttack([2, 2], [1, 1]);
     expect(canAttack).toBe(true);
   });
 
-  it.skip('can attack on fourth diagonal', () => {
+  it('can attack on fourth diagonal', () => {
     const canAttack = queenAttack([2, 2], [5, 5]);
     expect(canAttack).toBe(true);
   });
