@@ -2,63 +2,63 @@ const queenAttack = require('../app/queen_attack').queen_attack;
 
 describe('queen_attack', () => {
 
-  it('cannot attack in unrelated positions', () => {
+  it.skip('cannot attack in unrelated positions', () => {
     const canAttack = queenAttack([2,4], [6,6]);
     expect(canAttack).toBe(false);
   });
 
-  it('can attack on same rank', () => {
+  it.skip('can attack on same rank', () => {
     const canAttack = queenAttack([2,4], [2,6]);
     expect(canAttack).toBe(true);
   });
 
-  it('can attack on same file', () => {
+  it.skip('can attack on same file', () => {
     const canAttack = queenAttack([4, 5], [2, 5]);
     expect(canAttack).toBe(true);
   });
 
-  it('can attack on first diagonal', () => {
+  it.skip('can attack on first diagonal', () => {
     const canAttack = queenAttack([2, 2], [0, 4]);
     expect(canAttack).toBe(true);
   });
 
-  it('can attack on second diagonal', () => {
+  it.skip('can attack on second diagonal', () => {
     const canAttack = queenAttack([2, 2], [3, 1]);
     expect(canAttack).toBe(true);
   });
 
-  it('can attack on third diagonal', () => {
+  it.skip('can attack on third diagonal', () => {
     const canAttack = queenAttack([2, 2], [1, 1]);
     expect(canAttack).toBe(true);
   });
 
-  it('can attack on fourth diagonal', () => {
+  it.skip('can attack on fourth diagonal', () => {
     const canAttack = queenAttack([2, 2], [5, 5]);
     expect(canAttack).toBe(true);
   });
 
-  it('raises an error if the rank is negative', () => {
+  it.skip('raises an error if the rank is negative', () => {
     expect(() => queenAttack([-2, 2])).
-      toThrow('Invalid position: Must be between 0 and 7');
+      toThrow(new Error ('Invalid position: Must be between 0 and 7'));
   });
 
-  it('raises an error if the rank is off the board', () => {
+  it.skip('raises an error if the rank is off the board', () => {
     expect(() => queenAttack([8, 4])).
-      toThrow('Invalid position: Must be between 0 and 7');
+      toThrow(new Error ('Invalid position: Must be between 0 and 7'));
   });
 
-  it('raises an error if the file is negative', () => {
+  it.skip('raises an error if the file is negative', () => {
     expect(() => queenAttack([2, -2])).
-      toThrow('Invalid position: Must be between 0 and 7');
+      toThrow(new Error ('Invalid position: Must be between 0 and 7'));
   });
 
-  it('raises an error if the file is off the board', () => {
+  it.skip('raises an error if the file is off the board', () => {
     expect(() => queenAttack([4, 8])).
-      toThrow('Invalid position: Must be between 0 and 7');
+      toThrow(new Error ('Invalid position: Must be between 0 and 7'));
   });
 
   it.skip('raises an error if two queens in the same position', () => {
-    expect(() => queenAttack([4, 8], [4, 8])).
+    expect(() => queenAttack([4, 7], [4, 7])).
       toThrow(new Error ('Invalid position: Queens cannot have the same position'));
   });
 });

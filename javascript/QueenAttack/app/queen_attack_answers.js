@@ -7,9 +7,11 @@ const queen_attack = (black_position, white_position) => {
 
   if (isRankOutOfBounds() || isFileOutOfBounds()){
     throw 'Invalid position: Must be between 0 and 7';
-  } else {
-    return isRankValid() || isFileValid() || isDiagonalValid();
   }
+  if(identicalQueensPositions()){
+    throw 'Invalid position: Queens cannot have the same position';
+  }
+  return isRankValid() || isFileValid() || isDiagonalValid();
 };
 
 // Checks if rank (row) is the same
@@ -37,6 +39,12 @@ const isRankOutOfBounds = () => {
 const isFileOutOfBounds = () => {
   return (blackPosition[1] < 0) || (whitePosition[1] < 0)
     || (blackPosition[1] > 7) || (whitePosition[1] > 7)
+};
+
+// Checks if queens are in the same position
+const identicalQueensPositions = () => {
+  return blackPosition[0] === whitePosition[0] &&
+    blackPosition[1] === whitePosition[1];
 };
 
 module.exports = {
