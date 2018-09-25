@@ -37,7 +37,7 @@ describe('queen_attack', () => {
     expect(canAttack).toBe(true);
   });
 
-  it.skip('raises an error if the rank is negative', () => {
+  it('raises an error if the rank is negative', () => {
     expect(() => queenAttack([-2, 2])).
       toThrow('Invalid position: Must be between 0 and 7');
   });
